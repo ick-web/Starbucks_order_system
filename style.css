@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translate3d(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0px);
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    transform: translate3d(0px);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-1000px);
+  }
+}
+
+:root {
+  /*Fonts*/
+  font-family: "Gantari", serif;
+  font-family: "Gasoek One", serif;
+  font-family: "Noto Sans KR", serif;
+
+  /*Colors*/
+  --font-color: #2d2b28;
+  --font-color: #fff;
+  --primary-color: #9f7858;
+  --accent-color: #045744;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  width: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #9f7858;
+  border-radius: 10pxn;
+}
+
+div {
+  animation: appear 20s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+#line {
+  animation: disappear 7s linear;
+  animation-timeline: view();
+}
+
+#phrase {
+  animation: appear 20s;
+  animation-timeline: view();
+}
+
+.top {
+  width: 100%;
+  height: 650px;
+  vertical-align: top;
+  backdrop-filter: blur(20px);
+  background-position: center;
+  background-size: cover;
+  background: none;
+}
+
+.top:before {
+  background-image: url("https://images.unsplash.com/photo-1543324035-47e8e6a9f6b4?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: inherit;
+  background-size: cover;
+  filter: blur(3.5px);
+  content: "";
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+#line {
+  position: absolute;
+  color: #ffffff;
+  writing-mode: vertical-lr;
+  top: 15vh;
+  right: 5vh;
+}
+
+#phrase {
+  position: absolute;
+  font-family: "Noto Sans KR", serif;
+  font-size: 25px;
+  font-weight: 200;
+  letter-spacing: 10px;
+  color: #ffffff;
+  writing-mode: vertical-lr;
+  right: 6vh;
+  top: 18vh;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Gasoek One", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 62px;
+  letter-spacing: 3px;
+}
+
+button {
+  background-color: #045744;
+  color: white;
+  font-size: 30px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  float: right;
+  margin: -20px 20px 0 0;
+}
+
+button:hover {
+  background-color: #014738;
+}
+
+button:active {
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+#menu {
+  padding: 0 0 30px 0;
+  margin: 0 0 200px 0;
+  text-align: center;
+}
+
+h3 {
+  border-bottom: 3px solid #876243;
+  padding-bottom: 10px;
+  margin-bottom: 70px;
+  max-width: 2000px;
+  font-family: "Noto Sans KR", serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #2d2b28;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drinks {
+  margin: 80px 25px;
+  display: inline-block;
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  text-align: left;
+  background-color: #d0b9a5;
+}
+
+.drinks img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.name {
+  margin: 20px 0 0 20px;
+  font-family: "Noto Sans KR", serif;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  color: #2d2b28;
+}
+
+.price {
+  margin: 15px 0 0 20px;
+  color: #876243;
+  font-size: 20px;
+}
+
+#order-summary {
+  margin: 0 auto 200px auto;
+  background-color: #d0b9a5;
+  border-radius: 10px;
+  padding: 30px;
+  font-family: "Noto Sans KR", serif;
+  font-size: 25px;
+  font-weight: 700;
+  max-width: 1900px;
+}
+
+#submit-order {
+  height: 40px;
+  width: 200px;
+  background-color: #045744;
+  font-size: 16px;
+  margin-left: 800px;
+}
+
+#total-price {
+  margin: none;
+}
+
+.remove {
+  background: none;
+  margin-top: 20px;
+  font-family: "Gantari", serif;
+  font-size: 25px;
+  font-weight: 700;
+  color: #2d2b28;
+}
+
+button.remove:hover {
+  background-color: #b8997e;
+}
+
+button.remove:active {
+  transform: scale(0.9);
+  transition: 0.5s;
+}
+
+#order-summary ul {
+  font-family: "Noto Sans KR", serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 80px;
+  padding-bottom: 50px;
+  color: #876243;
+}
